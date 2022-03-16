@@ -1,0 +1,20 @@
+<section>
+    <div class="product-container">
+        <div class="product-list">
+            <div class="list-items" *ngFor="let fruit of fruits" (click)="selectFruit(fruit)" [ngClass]="{'selected':selectedfruits['id'] == fruit['id']}">
+                <div class="item-label"><b>{{fruit.name}}</b></div>
+                <div class="item-label"><small>{{fruit.description}}</small></div>
+                <div class="item-label"><b>₹{{fruit.price}}/Kg</b></div>
+            </div>
+            <br><br><br>
+        </div>
+        <div class="product-content">
+            <div class="image-container">
+                <img [src]="selectedfruits['imgSRC']" alt="selectedfruits['name']">
+            </div>
+            <div class="product-cap">{{selectedfruits['name']}}</div>
+            <div class="product-desc">{{selectedfruits['description']}}</div>
+            <div class="product-price">₹{{selectedfruits['price']}}/Kg</div>
+        </div>
+    </div>
+</section>

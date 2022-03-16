@@ -1,0 +1,40 @@
+.home-container{
+    height: 100vh;
+    background-color: #e8eff7;
+}
+.home-container header{
+    height: 70px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw 0 5vw;
+}
+.home-container header .title-icon{
+    width: 90px;
+}
+.home-container header .title-icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.menus{
+    display: flex;
+}
+.menu{
+    margin: 5px;
+    padding: 0px 15px;
+    font-size: 17px;
+    cursor: pointer;
+    color: #e11c26;
+    border-right: 1px solid #e11c26;
+    transition: all .3s linear;
+}
+.menu:hover{
+    color: #ff9095;
+}
+.r-active{
+    color: #fff;
+    font-weight: 600;
+}

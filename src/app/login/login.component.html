@@ -1,0 +1,63 @@
+<section>
+    <div class="login-container">
+        <div class="login-form-container">
+            <div class="content">
+                <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                    <h2>Login</h2>
+                    <div class="social-lohin">
+                        <div class="icon">
+                            <img src="https://flyclipart.com/thumb2/black-twitter-line-social-media-icon-468425.png" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAflBMVEX///8EAgQAAADFxcWgoKC8vbxGRUZbWltTU1M0NDQoKSg4OThDQkNhYWFtbG0gISAsLixLSUsdHR11dXVnaGcODQ4YFhjx8fH3+PeysrKqqqpQT1B9fX1nZmdhYGHV1dXn6OeNjI2Eg4Td3t1WVFbS0dLq6eqXmJebm5sjICO4H7iJAAAD20lEQVR4nO3di3LaMBSE4ViAyQ1IAsQEaLnlQt7/Bcu0M50yMcFHVrUrsf8DZM4XEyC2LF9dwZpVu87L/FD3XB3ckJ5Vu5fNpJy6pm3RA5uqOpvF05/Bi4alJFx3SxsuLWE1L824lITrbeGj+y1coodvULX0OnrpCLstfCkId2Ub30E4RgvONG/n4xdu2wLJhbNBWx+78LU9sHBDtOKbAhzBg3CCZpxuHALILOwGARbuBxpyqrfW76LswmkYIK9wGwhYuAGaUt8q0Gv0IPyJttQX5IOCWRjuELIKwx3CwvXRmLrewx1CUuFHOCCpMNRnIa1wFRDIKQz5Ii3cNZpTU5m7MOQ7KaewExJIKQz6Z0gpnOQunN3lLqyCvtEwCtdBgYzCsG+lhVugQV+aZy/c+18qrI3vVbqxCs+sxSjRoC9Zz7I5d//RW61n6LmbtzSutbhJbkmQ7XKFG72jBzY3tAl76Hntmc6zuSl6XI/6JiHrVYnvujYJ9+hxPXo0CRP8M7y6Nwnf0ON6ZPr30O3Q43p0YxKu0eN69JC98NYkrNDjejTKXvgk4YUJE/q38G/5C02XRy9AiJ7WJ4vQSUiZhBLyJ+GRsEBP65OO4ZEwxdOlNuEzelqfTMIn9LQ+mYQj9LQ+mYS36Gm/q+rUZxOe+CH/hDtn3Dl1Wbo58OwVbuxV7sCrSk7+DnB358USfmQvfMleiFvIEEfo3Cp7Ie76Wywh7qx4JCHwu3kkIfB7XSThY/ZC4M3qkYSb7IXAJUWRhLgvbbGEwNWnkYS4L22xhOvshcCLxFGE0JPicYTIE6pxhPfZC5F7RsQRInfciyPEnWmLJexmL0SudI8jRK50jyNE3hUVQ4g80xZJOM1eeIdcnRlFCN2cJooQurVnFCF0m+QoQujNe2GEZy7iQ2/eC7JSoSi/9rhYLPr9wXC83MyhC93fe/U9Z7/qy3K/hYScSSghfyZhkqsvJZSQPwnTF35mL7TsOCAhZxJKyJ9JSH3PzKlMwgf0tD5JKCF/EqYvtOxmJiFnEkrIn4RHwjv0tD5JKCF/EqYvtOwjnKbQshe0hJxJKCF/Eh4JkTdueSehhPxJmL7Q8iTZNIWW58xIyJmEEvJnEvI9vrFBJiHfQ0YbZBICd/LyT8L0hZanA0rImYQXJkzy89Ak5HvodoMkTF/4mr3Q8sRjCTmTUEL+TELoDju+SZi+cCChhPRJKCF/JuEAPa1PEqYvnEgoIX0SSsifSQh8mpN/JiF0F13fhhJKSJ+EEvIn4YUJx+hpfRpLKCF9EkrIX/7C4ZmHchyV5Cd+b99t3P5/P4PkF79qWBJNnBzqAAAAAElFTkSuQmCC" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="https://i.pinimg.com/originals/a3/d5/8f/a3d58f0b2820871d486e9851c0fdbb60.jpg" alt="">
+                        </div>
+                        <div class="icon">
+                            <img src="https://i.pinimg.com/474x/c2/81/8c/c2818c6d5d111f61846fbc878bc51b5e.jpg" alt="">
+                        </div>
+                    </div>
+                    <h5>or use you email</h5>
+                    <br>
+                    <div class="error-container">
+                        <div *ngIf="loginService.isError">{{loginService.errorMsg}}{{' => id : a1@gmail.in , pass: A1a@gi'}}</div>
+                    </div>
+                    <div class="control-container">
+                        <div class="control">
+                            <input type="email" placeholder="Email" formControlName="email">
+                        </div>
+                        <div class="error-container">
+                            <div *ngIf="loginForm.controls.email.invalid  && (loginForm.controls.email.touched || loginForm.controls.email.dirty)">Required lower & numeric values.</div>
+                        </div>
+                    </div>
+                    <div class="control-container">
+                        <div class="control">
+                            <input type="password" formControlName="password" placeholder="Password">
+                        </div>
+                        <div class="error-container">
+                            <div *ngIf="loginForm.controls.password.invalid  && (loginForm.controls.password.touched || loginForm.controls.password.dirty)">Required lower, upper, special & numeric values.</div>
+                        </div>
+                    </div>
+                    <div class="control-container">
+                        <div class="control check-flex">
+                            <input type="checkbox" name="terms" formControlName="terms">
+                            <label for="terms">I agree to <b>Terms</b> and <b>Privacy Policy</b></label>
+                        </div>
+                        <div class="error-container">
+                            <div *ngIf="loginForm.controls.terms.invalid  && (loginForm.controls.terms.touched || loginForm.controls.terms.dirty)">Accept terms and policy before login.</div>
+                        </div>
+                    </div>
+                    <div class="action-container">
+                        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+                        <br>
+                        <button type="button">Create Account</button>
+                    </div>
+                </form>
+            </div>
+            <!-- <div class="content">
+                <img src="https://i.pinimg.com/474x/c2/81/8c/c2818c6d5d111f61846fbc878bc51b5e.jpg" alt="">
+            </div> -->
+        </div>
+    </div>
+</section>

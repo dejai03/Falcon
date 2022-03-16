@@ -1,0 +1,103 @@
+.login-container{
+    height: 100vh;
+    background-color: #e8eff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form-container{
+    background: #fff;
+    padding: 5vh 3vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 13px #e2e2e2;
+    text-align: center;
+}
+.content>img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.login-form-container h2{
+    color: #EB696B;
+    margin: 6% 0;
+    letter-spacing: .3px;
+    font-weight: 600;
+
+}
+.login-form-container h5{
+    color: #5a5959;
+    margin: 1% 0;
+    font-weight: 400;
+}
+.social-lohin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-lohin .icon{
+    margin: 5px;
+    border: 1px solid #4a4a4a;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+
+}
+.social-lohin .icon img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.control-container{
+    margin: 10px 0;
+}
+.control-container .control input:not([type=checkbox]){
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #EAF1F2;
+    outline: none;
+    color: #4a4a4a;
+    width: calc(100% - 20px);
+    background: #F6F8FA;
+    font-size: 16px;
+}
+.control-container .control input[type=checkbox]{
+    margin: 10px;
+    outline: none;
+    color: #4a4a4a;
+}
+.error-container div{
+    margin: 5px;
+    color: #db0000;
+    font-size: 8px;
+    font-weight: 600;
+    text-align: left;
+}
+label{
+    font-size: 9px;
+    color: #4a4a4a;
+}
+.check-flex{
+    display: flex;
+    align-items: center;
+}
+.action-container button{
+    font-size: 12px;
+    padding: 10px 16px;
+    border-radius: 3px;
+    border: 1px solid #FF5455;
+    outline: none;
+    margin: 3px;
+    width: calc(100%);
+    background: #FF5455;
+    font-weight: 600;
+    color: #fff;
+}
+.action-container button:nth-child(3){
+    background: #fff!important;
+    color: #FF5455;
+}
+label b {
+    color: #ff5455;
+}

@@ -1,0 +1,16 @@
+<section>
+    <div class="home-container">
+        <header>
+            <div class="title-icon">
+                <img src="assets/images/falcon.png" alt="falcon">
+            </div>
+            <div class="menus">
+                <div class="menu" routerLink="/home/fruits" routerLinkActive="r-active" routerLinkActiveOptions="{exact:true}">Fruits</div>
+                <div class="menu" routerLink="/home/vegetables" routerLinkActive="r-active" routerLinkActiveOptions="{exact:true}">Vegetables</div>
+                <div class="menu" routerLink="/logout" routerLinkActive="r-active" routerLinkActiveOptions="{exact:true}" (click)="logout()">Logout</div>
+            </div>
+        </header>
+        <div class="home-content" *ngIf="isFruits"><app-fruits></app-fruits></div>
+        <div class="home-content" *ngIf="!isFruits"><app-vegetables></app-vegetables></div>
+    </div>
+</section>
